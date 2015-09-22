@@ -40,7 +40,7 @@
 }
 
 - (void)alOptionsButton:(ALOptionsButton *)alOptionsButton didSlectItem:(ALOptionsItem *)item{
-    NSLog(@"%lu",item.index);
+    NSLog(@"you select button at %lu",item.index);
 }
 
 @end
