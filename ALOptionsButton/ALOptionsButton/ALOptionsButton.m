@@ -14,6 +14,7 @@
 @property (nonatomic) UIView *blackView;
 @property (nonatomic) NSMutableArray *alOptionItems;
 @property (nonatomic) UIDynamicAnimator *animator;
+@property (nonatomic) UIButton *alterCenterButton;
 
 @end
 
@@ -42,10 +43,10 @@
         self.centerPoint = [self.tabBar.superview convertPoint:view.center fromView:self.tabBar];
         CGSize tabbBarSize = self.tabBar.frame.size;
         self.frame = CGRectMake(0, 0, tabbBarSize.height - 10, tabbBarSize.height - 10);
-        self.center = self.centerPoint;
+        self.center = view.center;
         self.layer.cornerRadius = self.frame.size.height/2;
         [self setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
-        [self.tabBar.superview addSubview:self];
+        [self.tabBar addSubview:self];
         [self addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
         
         self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.tabBar.superview];
@@ -83,9 +84,20 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonPressed)];
     [self.blackView addGestureRecognizer:tap];
     
-    [self.tabBar.superview insertSubview:self.blackView belowSubview:self];
-    [UIView animateWithDuration:0.3 animations:^{
+    [self.tabBar.superview addSubview:self.blackView];
+    
+    CGSize tabbBarSize = self.tabBar.frame.size;
+    self.alterCenterButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tabbBarSize.height - 10, tabbBarSize.height - 10)];
+    self.alterCenterButton.center = self.centerPoint;
+    self.alterCenterButton.layer.cornerRadius = self.alterCenterButton.frame.size.height/2;
+    self.alterCenterButton.backgroundColor = [UIColor redColor];
+    [self.alterCenterButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
+    [self.alterCenterButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.blackView addSubview:self.alterCenterButton];
+    
+    [UIView animateWithDuration:0.2 animations:^{
         self.blackView.alpha = 0.7;
+        self.alterCenterButton.transform = CGAffineTransformRotate(self.alterCenterButton.transform, -M_PI_4);
     } completion:^(BOOL finished) {
         if(finished){
             self.enabled = YES;
@@ -95,11 +107,13 @@
 
 - (void)removeBlackView{
     self.enabled = NO;
-    [UIView animateWithDuration:0.3
+    [UIView animateWithDuration:0.2
                      animations:^{
                          self.blackView.alpha = 0.0;
+                         self.alterCenterButton.transform = CGAffineTransformRotate(self.alterCenterButton.transform, M_PI_4);
                      }
                      completion:^(BOOL finished) {
+                         self.alterCenterButton = nil;
                          self.blackView = nil;
                          self.enabled = YES;
                      }];
@@ -132,7 +146,7 @@
         
         ALOptionsItem *alOptionItem = [self createItemAtIndex:i];
         alOptionItem.center = self.centerPoint;
-        [self.tabBar.superview insertSubview:alOptionItem belowSubview:self];
+        [self.tabBar.superview addSubview:alOptionItem];
         
         UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc] initWithItem:alOptionItem attachedToAnchor:buttonPoint];
         attachment.damping = 0.5;
