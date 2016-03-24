@@ -2,7 +2,7 @@
 用于在UITabbar中间添加一个可弹出菜单的button。
 
 ## 示例
-![](images/2016/03/aloptionsButton示例.gif)
+![](images/2016/03/示例.mov.gif)
 ## 用法
 
 ```objective-c
