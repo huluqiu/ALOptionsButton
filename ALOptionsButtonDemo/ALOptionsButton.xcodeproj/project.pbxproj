@@ -15,9 +15,9 @@
 		ED0EB5DA1BB13B51006710DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EB5D81BB13B51006710DF /* LaunchScreen.storyboard */; };
 		ED0EB5E51BB13B51006710DF /* ALOptionsButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB5E41BB13B51006710DF /* ALOptionsButtonTests.m */; };
 		ED0EB5F01BB13B51006710DF /* ALOptionsButtonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB5EF1BB13B51006710DF /* ALOptionsButtonUITests.m */; };
-		ED0EB6041BB13B8F006710DF /* ALOptionsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB5FF1BB13B8F006710DF /* ALOptionsButton.m */; settings = {ASSET_TAGS = (); }; };
-		ED0EB6051BB13B8F006710DF /* ALOptionsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0EB6011BB13B8F006710DF /* ALOptionsItem.m */; settings = {ASSET_TAGS = (); }; };
-		ED0EB6061BB13B8F006710DF /* tabbar_compose_icon_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0EB6031BB13B8F006710DF /* tabbar_compose_icon_add@2x.png */; settings = {ASSET_TAGS = (); }; };
+		EDCACE7F1CA4017E0050A69A /* ALOptionsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACE7A1CA4017E0050A69A /* ALOptionsButton.m */; };
+		EDCACE801CA4017E0050A69A /* tabbar_compose_icon_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCACE7C1CA4017E0050A69A /* tabbar_compose_icon_add@2x.png */; };
+		EDCACE811CA4017E0050A69A /* ALOptionsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCACE7E1CA4017E0050A69A /* ALOptionsItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +54,11 @@
 		ED0EB5EB1BB13B51006710DF /* ALOptionsButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALOptionsButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0EB5EF1BB13B51006710DF /* ALOptionsButtonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOptionsButtonUITests.m; sourceTree = "<group>"; };
 		ED0EB5F11BB13B51006710DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED0EB5FE1BB13B8F006710DF /* ALOptionsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOptionsButton.h; sourceTree = "<group>"; };
-		ED0EB5FF1BB13B8F006710DF /* ALOptionsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOptionsButton.m; sourceTree = "<group>"; };
-		ED0EB6001BB13B8F006710DF /* ALOptionsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOptionsItem.h; sourceTree = "<group>"; };
-		ED0EB6011BB13B8F006710DF /* ALOptionsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOptionsItem.m; sourceTree = "<group>"; };
-		ED0EB6031BB13B8F006710DF /* tabbar_compose_icon_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add@2x.png"; sourceTree = "<group>"; };
+		EDCACE791CA4017E0050A69A /* ALOptionsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOptionsButton.h; sourceTree = "<group>"; };
+		EDCACE7A1CA4017E0050A69A /* ALOptionsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOptionsButton.m; sourceTree = "<group>"; };
+		EDCACE7C1CA4017E0050A69A /* tabbar_compose_icon_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add@2x.png"; sourceTree = "<group>"; };
+		EDCACE7D1CA4017E0050A69A /* ALOptionsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOptionsItem.h; sourceTree = "<group>"; };
+		EDCACE7E1CA4017E0050A69A /* ALOptionsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOptionsItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +109,11 @@
 		ED0EB5C91BB13B51006710DF /* ALOptionsButton */ = {
 			isa = PBXGroup;
 			children = (
+				EDCACE781CA4017E0050A69A /* ALOptionsButton */,
 				ED0EB5CD1BB13B51006710DF /* AppDelegate.h */,
 				ED0EB5CE1BB13B51006710DF /* AppDelegate.m */,
 				ED0EB5D01BB13B51006710DF /* ViewController.h */,
 				ED0EB5D11BB13B51006710DF /* ViewController.m */,
-				ED0EB5FD1BB13B8F006710DF /* ALOptionsButton */,
 				ED0EB5D31BB13B51006710DF /* Main.storyboard */,
 				ED0EB5D61BB13B51006710DF /* Assets.xcassets */,
 				ED0EB5D81BB13B51006710DF /* LaunchScreen.storyboard */,
@@ -149,24 +149,25 @@
 			path = ALOptionsButtonUITests;
 			sourceTree = "<group>";
 		};
-		ED0EB5FD1BB13B8F006710DF /* ALOptionsButton */ = {
+		EDCACE781CA4017E0050A69A /* ALOptionsButton */ = {
 			isa = PBXGroup;
 			children = (
-				ED0EB5FE1BB13B8F006710DF /* ALOptionsButton.h */,
-				ED0EB5FF1BB13B8F006710DF /* ALOptionsButton.m */,
-				ED0EB6001BB13B8F006710DF /* ALOptionsItem.h */,
-				ED0EB6011BB13B8F006710DF /* ALOptionsItem.m */,
-				ED0EB6021BB13B8F006710DF /* Resources */,
+				EDCACE791CA4017E0050A69A /* ALOptionsButton.h */,
+				EDCACE7A1CA4017E0050A69A /* ALOptionsButton.m */,
+				EDCACE7D1CA4017E0050A69A /* ALOptionsItem.h */,
+				EDCACE7E1CA4017E0050A69A /* ALOptionsItem.m */,
+				EDCACE7B1CA4017E0050A69A /* ALOptionsButton_Resources */,
 			);
-			path = ALOptionsButton;
+			name = ALOptionsButton;
+			path = ../../ALOptionsButton;
 			sourceTree = "<group>";
 		};
-		ED0EB6021BB13B8F006710DF /* Resources */ = {
+		EDCACE7B1CA4017E0050A69A /* ALOptionsButton_Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ED0EB6031BB13B8F006710DF /* tabbar_compose_icon_add@2x.png */,
+				EDCACE7C1CA4017E0050A69A /* tabbar_compose_icon_add@2x.png */,
 			);
-			path = Resources;
+			path = ALOptionsButton_Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED0EB6061BB13B8F006710DF /* tabbar_compose_icon_add@2x.png in Resources */,
+				EDCACE801CA4017E0050A69A /* tabbar_compose_icon_add@2x.png in Resources */,
 				ED0EB5DA1BB13B51006710DF /* LaunchScreen.storyboard in Resources */,
 				ED0EB5D71BB13B51006710DF /* Assets.xcassets in Resources */,
 				ED0EB5D51BB13B51006710DF /* Main.storyboard in Resources */,
@@ -304,10 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0EB5D21BB13B51006710DF /* ViewController.m in Sources */,
-				ED0EB6041BB13B8F006710DF /* ALOptionsButton.m in Sources */,
+				EDCACE7F1CA4017E0050A69A /* ALOptionsButton.m in Sources */,
 				ED0EB5CF1BB13B51006710DF /* AppDelegate.m in Sources */,
 				ED0EB5CC1BB13B51006710DF /* main.m in Sources */,
-				ED0EB6051BB13B8F006710DF /* ALOptionsItem.m in Sources */,
+				EDCACE811CA4017E0050A69A /* ALOptionsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +534,7 @@
 				ED0EB5F61BB13B51006710DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED0EB5F71BB13B51006710DF /* Build configuration list for PBXNativeTarget "ALOptionsButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +543,7 @@
 				ED0EB5F91BB13B51006710DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED0EB5FA1BB13B51006710DF /* Build configuration list for PBXNativeTarget "ALOptionsButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +552,7 @@
 				ED0EB5FC1BB13B51006710DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

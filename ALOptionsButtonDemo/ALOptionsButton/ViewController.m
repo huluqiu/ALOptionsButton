@@ -34,8 +34,13 @@
 
 - (ALOptionsItem *)tabBar:(UITabBar *)tabBar itemAtIndex:(NSUInteger)index{
     ALOptionsItem *item = [[ALOptionsItem alloc] initWithIndex:index];
-    [item setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"]];
-    [item setTitle:@"上传照片"];
+    if (index == 0) {
+        [item setImage:[UIImage imageNamed:@"green"]];
+        [item setTitle:@"green"];
+    }else if (index == 1){
+        [item setImage:[UIImage imageNamed:@"orange"]];
+        [item setTitle:@"orange"];
+    }
     return item;
 }
 

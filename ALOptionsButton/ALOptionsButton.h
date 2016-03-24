@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, ALOptionsButtonState){
 @property (nonatomic, weak) id<ALOptionsButtonDelegate> delegate;
 @property (nonatomic, readonly, weak) UITabBar *tabBar;
 @property (nonatomic, assign) NSUInteger locationIndexInTabBar;
-@property (nonatomic, readonly) ALOptionsButtonState currentState;
+@property (nonatomic, readonly, assign) ALOptionsButtonState currentState;
 
 - (instancetype)initForTabBar:(UITabBar*)tabBar
                  forItemIndex:(NSUInteger)itemIndex

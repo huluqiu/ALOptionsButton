@@ -10,11 +10,11 @@
 
 @interface ALOptionsButton ()
 
-@property (nonatomic) CGPoint centerPoint;
-@property (nonatomic) UIView *blackView;
-@property (nonatomic) NSMutableArray *alOptionItems;
-@property (nonatomic) UIDynamicAnimator *animator;
-@property (nonatomic) UIButton *alterCenterButton;
+@property (nonatomic, assign) CGPoint centerPoint;
+@property (nonatomic, strong) UIView *blackView;
+@property (nonatomic, strong) NSMutableArray *alOptionItems;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+@property (nonatomic, strong) UIButton *alterCenterButton;
 
 @end
 
@@ -184,15 +184,5 @@
         [self.delegate alOptionsButton:self didSlectItem:(ALOptionsItem *)item.superview];
     }
 }
-
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
